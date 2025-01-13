@@ -1,0 +1,321 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 0px; /* Memberikan ruang untuk navbar */
+}
+
+/* Navbar */
+header {
+  background-color: #ff00007a;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#navbar .logo img {
+  height: 50px; /* Menentukan ukuran logo */
+  margin-right: 20px; /* Memberikan jarak antara logo dan navbar */
+}
+
+#navbar .menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+#navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #222;
+  transform: scale(1.1);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section General Styling */
+section {
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* Home Section (Banner) */
+#home {
+  background-image: url('images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.banner-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 80%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.banner-content h1 {
+  font-size: 3.5em;
+  color: white;
+  background-color: #0000007a;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.banner-content p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  padding: 12px 30px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
+}
+
+.banner-content button:hover {
+  background-color: #cc0000;
+}
+
+/* Album Section */
+#album {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#album h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.album-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.album-item {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.album-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Spotify-like Play Button */
+.play-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #1DB954; /* Spotify Green */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.8;
+  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.play-btn:hover {
+  background-color: #1ed760; /* Lighter Spotify Green */
+  opacity: 1;
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Play Button Icon */
+.play-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.play-btn:hover svg {
+  transform: scale(1.1); /* Slightly increase size of play icon */
+}
+
+/* Hiding audio elements, as they are not visible */
+audio {
+  display: none;
+}
+
+/* Gallery Section */
+#gallery {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#gallery h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#contact h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px;
+  font-size: 1.1em;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact textarea {
+  resize: vertical;
+}
+
+#contact button {
+  padding: 12px 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1.1em;
+}
+
+footer a {
+  color: #ff0000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .album-images img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #contact form {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide img {
+    height: 200px;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
+}
