@@ -40,59 +40,83 @@
     <p>We are Komplotan Pemuda Sehat, a band that creates music with heart and soul!</p>
   </section>
 
- <!-- Album Section -->
+<!-- Section Album -->
 <section id="album">
-    <h2>Our Albums</h2>
-    <div class="album-images">
-      <div class="album-item">
-        <img src="images/album1.jpg" alt="Album 1">
-        <button class="play-btn" onclick="playAudio('audio1')">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="white">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-        </button>
-        <audio id="audio1" src="audio/track1.mp3"></audio>
-      </div>
-      <div class="album-item">
-        <img src="images/album2.jpg" alt="Album 2">
-        <button class="play-btn" onclick="playAudio('audio2')">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="white">
-            <path d="M8 5v14l11-7z"/>
-          </svg>
-        </button>
-        <audio id="audio2" src="audio/track2.mp3"></audio>
-      </div>
-      </div>
+  <div class="album-container">
+    <div class="album-image">
+      <img src="images/album1.jpg" alt="Album Cover" id="albumCover">
     </div>
-  </section>
-  
+    <div class="album-info">
+      <h2>Komplotan Pemuda Sehat - Single</h2>
+      <p>Deskripsi album atau info lebih lanjut</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Gallery Section with Carousel -->
+ <!-- Album Section -->
+ <section id="album">
+  <h2>Our Songs</h2>
+  <div class="album-images">
+    <div class="album-item">
+      <img src="images/album1.jpg" alt="Album 1">
+      <button class="play-btn" onclick="playAudio('audio1')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="white">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+      <audio id="audio1" src="audio/track1.mp3"></audio>
+    </div>
+    <div class="album-item">
+      <img src="images/album2.jpg" alt="Album 2">
+      <button class="play-btn" onclick="playAudio('audio2')">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="white">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+      </button>
+      <audio id="audio2" src="audio/track2.mp3"></audio>
+    </div>
+    </div>
+  </div>
+</section>
+
+
   <section id="gallery">
     <h2>Gallery</h2>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/photo1.jpg" alt="Gallery Image 1"></div>
-        <div class="swiper-slide"><img src="images/IMG-20230827-WA0065.jpg" alt="Gallery Image 2"></div>
-        <div class="swiper-slide"><img src="images/IMG-20230827-WA0067.jpg" alt="Gallery Image 3"></div>
+    <div class="gallery-container">
+      <div class="gallery-slider">
+        <div class="gallery-item">
+          <img src="images/photo1.jpg" alt="Gallery Image 1" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG-20230827-WA0067.jpg" alt="Gallery Image 2" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG-20230827-WA0065.jpg" alt="Gallery Image 3" class="gallery-image">
+        </div>
+        <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
       </div>
-      <!-- Add Pagination and Navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
+     </div>
+     <!-- Modal for Enlarged Image -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img id="modalImage" class="modal-content" src="" alt="Enlarged Image">
+  <div id="caption"></div>
+</div>
   </section>
+  
+  
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="#">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <p>Get in touch with Komplotan Pemuda Sehat!</p>
+    <p>If you have any inquiries or want to collaborate, feel free to reach out!</p>
+    
+    <!-- Email Link -->
+    <a href="mailto:komplotanpemudasehat@gmail.com" class="contact-link">
+      <button>Send Email</button>
+    </a>
   </section>
+  
 
   <!-- Footer Section -->
   <footer>

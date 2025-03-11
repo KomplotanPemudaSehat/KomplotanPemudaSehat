@@ -82,6 +82,7 @@ section {
   align-items: center;
   position: relative;
   text-align: center;
+  padding-top: 0px;
 }
 
 .banner-content {
@@ -90,13 +91,13 @@ section {
   padding: 40px 30px;
   border-radius: 10px;
   max-width: 80%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0);
 }
 
 .banner-content h1 {
   font-size: 3.5em;
   color: white;
-  background-color: #0000007a;
+  background-color: #00000000;
   padding: 10px 20px;
   border-radius: 5px;
 }
@@ -166,10 +167,10 @@ section {
 .play-btn {
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 37%;
+  transform: translateX(0%);
   padding: 20px;
-  background-color: #1DB954; /* Spotify Green */
+  background-color:   #b01515; /* Spotify Green */
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -198,34 +199,81 @@ audio {
   display: none;
 }
 
-/* Gallery Section */
-#gallery {
-  padding: 50px 20px;
+
+/* ================== Gallery ================== */
+.gallery-container {
+  padding: 20px;
   text-align: center;
-  background-color: #fff;
 }
 
-#gallery h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.gallery-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide img {
+.gallery-item img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.5); /* Zoom in saat hover */
+}
+
+/* ================== Modal (Enlarged Image) ================== */
+.modal {
+  display: none; /* Awalnya disembunyikan */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+  padding: 60px;
+  text-align: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  margin: auto;
+}
+
+#caption {
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Contact Section */
 #contact {
-  background-color: #f4f4f4;
+  background-color: #1a1a1a;
+  color: white;
   text-align: center;
   padding: 50px 20px;
 }
@@ -235,40 +283,33 @@ audio {
   margin-bottom: 20px;
 }
 
-#contact form {
-  display: grid;
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+#contact p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
 
-#contact input,
-#contact textarea {
-  padding: 12px;
-  font-size: 1.1em;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Email Button */
+.contact-link {
+  text-decoration: none; /* Hapus underline pada link */
 }
 
-#contact textarea {
-  resize: vertical;
-}
-
-#contact button {
-  padding: 12px 20px;
-  background-color: #ff0000;
+.contact-link button {
+  padding: 15px 30px;
+  background-color: #f44336;  /* Red color for the button */
   color: white;
+  font-size: 1.2em;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
-  font-size: 1.2em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#contact button:hover {
-  background-color: #cc0000;
+.contact-link button:hover {
+  background-color: #d32f2f;  /* Darker red on hover */
+  transform: scale(1.05); /* Slightly increase the button size */
 }
+
 
 /* Footer Section */
 footer {
